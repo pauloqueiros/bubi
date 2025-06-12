@@ -45,7 +45,7 @@ import { LoveCounter } from './love-counter/love-counter';
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: start;
       gap: 1rem;
     }
     
