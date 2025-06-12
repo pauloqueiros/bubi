@@ -8,10 +8,11 @@
       <div class="song-name">Home ♡</div>
       <div class="artist-name">Edward Sharpe & The Magnetic Zeros</div>
     </div>
-    
-    <button (click)="togglePlay()" class="play-button">
-      <span class="play-icon">{{ isPlaying ? '⏸' : '▶' }}</span>
-    </button>    <audio #audioPlayer preload="auto" loop class="audio-element">
+      <button (click)="togglePlay()" class="play-button">
+      <div class="play-icon" [class.playing]="isPlaying">
+        <div class="icon-shape"></div>
+      </div>
+    </button><audio #audioPlayer preload="auto" loop class="audio-element">
       <source src="assets/romantic-song.mp3" type="audio/mpeg">
       Seu navegador não suporta o elemento de áudio.
     </audio>

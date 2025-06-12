@@ -79,6 +79,18 @@
   justify-content: center;
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(139, 67, 86, 0.3);
+  /* Melhora a performance em dispositivos móveis */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* Remove highlight azul no toque em mobile */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Melhora a responsividade do toque */
+  touch-action: manipulation;
 }
 
 .play-button:hover {
@@ -88,7 +100,51 @@
 }
 
 .play-icon {
-  margin-left: 1px;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ícone de Play (triângulo) */
+.play-icon .icon-shape {
+  width: 0;
+  height: 0;
+  border-left: 8px solid white;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  margin-left: 2px;
+  transition: all 0.2s ease;
+}
+
+/* Ícone de Pause (duas barras) */
+.play-icon.playing .icon-shape {
+  width: 10px;
+  height: 10px;
+  border: none;
+  background: #8b4356;
+  position: relative;
+  margin-left: 0;
+}
+
+.play-icon.playing .icon-shape::before,
+.play-icon.playing .icon-shape::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: white;
+}
+
+.play-icon.playing .icon-shape::before {
+  left: 1px;
+}
+
+.play-icon.playing .icon-shape::after {
+  right: 1px;
 }
 
 .audio-element {
@@ -115,6 +171,34 @@
     width: 30px;
     height: 30px;
     font-size: 0.7rem;
+    /* Força o hardware acceleration para melhor performance no mobile */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  /* Ajusta o tamanho dos ícones para mobile */
+  .play-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .play-icon .icon-shape {
+    border-left-width: 7px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    margin-left: 1px;
+  }
+  
+  .play-icon.playing .icon-shape {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .play-icon.playing .icon-shape::before,
+  .play-icon.playing .icon-shape::after {
+    width: 2px;
   }
   
   .song-name {
@@ -123,5 +207,11 @@
   
   .artist-name {
     font-size: 0.7rem;
+  }
+  
+  /* Melhora a interação touch */
+  .play-button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 }
