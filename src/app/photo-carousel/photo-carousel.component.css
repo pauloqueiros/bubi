@@ -147,7 +147,8 @@
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .dot {
