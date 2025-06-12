@@ -65,7 +65,6 @@ import { LoveCounter } from './love-counter/love-counter';
     .message p {
       font-size: 1rem;
       color: #5a4044;
-      line-height: 1.6;
       margin: 0 0 0.5rem 0;
       font-weight: 300;
     }
