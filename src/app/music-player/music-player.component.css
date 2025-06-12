@@ -152,6 +152,17 @@
 }
 
 @media (max-width: 600px) {
+  /* Ensure the music-player component is fully responsive */
+  .music-player {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .player-container {
+    width: 90%;
+    padding: 0.5rem;
+  }
+  
   .music-player {
     margin: 0;
   }

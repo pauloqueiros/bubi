@@ -102,44 +102,18 @@
 /* Mobile */
 @media (max-width: 600px) {
   .love-counter-container {
-    max-width: 340px;
-    margin: 0 auto;
-    padding: 0 0.5rem;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  
+
   .counter-card {
-    padding: 0.3rem;
-  }
-  
-  .counter-text {
-    font-size: 0.9rem;
-    margin-bottom: 0.3rem;
-  }
-  
-  .time-display {
-    gap: 0.3rem;
-    margin-bottom: 0.8rem;
-  }
-  
-  .time-unit {
-    min-width: 40px;
-    padding: 0.5rem 0.3rem;
-  }
-  
-  .number {
-    font-size: 1rem;
-  }
-  
-  .label {
-    font-size: 0.65rem;
-  }
-  
-  .counting-text {
-    font-size: 0.8rem;
-  }
-  
-  .heart-decoration {
-    font-size: 1.2rem;
-    margin-bottom: 0.6rem;
+    width:100%;
+    height: auto;
+    padding: 1rem;
   }
 }

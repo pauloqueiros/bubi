@@ -47,6 +47,14 @@
   justify-content: center;
 }
 
+/* Ensure the photo in the carousel does not exceed 340px */
+.carousel-content img {
+  max-width: 340px;
+  max-height: 340px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
 .photo-container {
   position: relative;
   width: 100%;
@@ -164,29 +172,17 @@
 /* Mobile */
 @media (max-width: 600px) {
   .carousel-container {
-    max-width: 320px;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  
-  .carousel-header {
-    margin-bottom: 0.8rem;
-  }
-  
+
   .carousel-content {
-    height: 330px;
-  }
-  
-  .carousel-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 1.2rem;
-  }
-  
-  .carousel-wrapper {
-    gap: 0.5rem;
-  }
-  
-  .carousel-title {
-    font-size: 0.8rem;
+    width: 90%;
+    height: auto;
   }
 }
