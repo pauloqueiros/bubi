@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # bubi2 - Projeto Romântico Minimalista ♡
 
 Uma aplicação Angular elegante e minimalista criada especialmente para uma mensagem de Dia dos Namorados para Bruna.
@@ -105,3 +106,6 @@ Este projeto foi criado com muito carinho para demonstrar amor através de códi
 ---
 
 **Feito com ♡ por Paulo para Bruna**
+=======
+# bubi
+>>>>>>> 3f041ca4fc542a758cbd810438af3e05d5416374
