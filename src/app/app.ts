@@ -32,7 +32,7 @@ import { LoveCounter } from './love-counter/love-counter';
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem;
+      padding: 0.5rem;
       font-family: 'Inter', sans-serif;
       overflow: hidden;
     }
@@ -90,14 +90,14 @@ import { LoveCounter } from './love-counter/love-counter';
     /* Mobile */
     @media (max-width: 600px) {
       .container {
-        padding: 0.5rem;
+        padding: 0.2rem;
         height: 100vh;
         align-items: center;
       }
       
       .content {
         max-width: 100%;
-        gap: 0.8rem;
+        gap: 0.3rem;
       }
       
       .title {
@@ -107,8 +107,8 @@ import { LoveCounter } from './love-counter/love-counter';
       
       .message p {
         font-size: 0.9rem;
-        padding: 0 0.5rem;
-        margin: 0 0 0.3rem 0;
+        padding: 0 0.2rem;
+        margin: 0 0 0.1rem 0;
       }
       
       .signature {

@@ -49,8 +49,8 @@
 
 /* Ensure the photo in the carousel does not exceed 340px */
 .carousel-content img {
-  max-width: 340px;
-  max-height: 340px;
+  width: 240px;
+  height: 340px;
   object-fit: cover;
   margin: 0 auto;
 }

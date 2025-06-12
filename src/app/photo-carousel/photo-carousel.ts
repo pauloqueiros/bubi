@@ -68,7 +68,9 @@ export class PhotoCarousel implements OnDestroy {
       'assets/photos/photo7.jpg',
       'assets/photos/photo8.jpg',
       'assets/photos/photo9.jpg',
-      'assets/photos/photo10.jpg'
+      'assets/photos/photo10.jpg',
+      'assets/photos/photo11.jpg',
+      'assets/photos/photo12.jpg'
     ];
     
     // Primeiro vamos testar se as fotos conhecidas carregam corretamente
