@@ -1,0 +1,39 @@
+<div class="love-counter-container">
+  <div class="counter-card">
+    <!-- <div class="heart-decoration">💕</div> -->
+    
+    <p class="counter-text">
+        <span class="heart-icon">♡</span>
+      Eu te amo há:
+    </p>
+    
+    <div class="time-display" *ngIf="timeElapsed">
+      <div class="time-unit" *ngIf="timeElapsed.years > 0">
+        <span class="number">{{ timeElapsed.years }}</span>
+        <span class="label">{{ timeElapsed.years === 1 ? 'ano' : 'anos' }}</span>
+      </div>
+      
+      <div class="time-unit" *ngIf="timeElapsed.years > 0 || timeElapsed.days > 0">
+        <span class="number">{{ timeElapsed.days }}</span>
+        <span class="label">{{ timeElapsed.days === 1 ? 'dia' : 'dias' }}</span>
+      </div>
+      
+      <div class="time-unit">
+        <span class="number">{{ timeElapsed.hours }}</span>
+        <span class="label">{{ timeElapsed.hours === 1 ? 'hora' : 'horas' }}</span>
+      </div>
+      
+      <div class="time-unit">
+        <span class="number">{{ timeElapsed.minutes }}</span>
+        <span class="label">{{ timeElapsed.minutes === 1 ? 'minuto' : 'minutos' }}</span>
+      </div>
+      
+      <div class="time-unit">
+        <span class="number">{{ timeElapsed.seconds }}</span>
+        <span class="label">{{ timeElapsed.seconds === 1 ? 'segundo' : 'segundos' }}</span>
+      </div>
+    </div>
+    
+    <p class="counting-text">e contando... ♡</p>
+  </div>
+</div>

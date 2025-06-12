@@ -1,0 +1,145 @@
+.love-counter-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.counter-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.counter-card:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 67, 86, 0.15);
+}
+
+.heart-decoration {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+.counter-text {
+  color: #8b4356;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+
+.time-display {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 45px;
+  flex-shrink: 0;
+  background: rgba(139, 67, 86, 0.1);
+  border-radius: 10px;
+  padding: 0.6rem 0.4rem;
+  transition: all 0.3s ease;
+}
+
+.time-unit:hover {
+  background: rgba(139, 67, 86, 0.15);
+  transform: scale(1.05);
+}
+
+.number {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #8b4356;
+  line-height: 1;
+  margin-bottom: 0.1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.label {
+  font-size: 0.7rem;
+  color: #5a4044;
+  font-weight: 300;
+  opacity: 0.8;
+  line-height: 1;
+  text-align: center;
+}
+
+.counting-text {
+  color: #8b4356;
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.8;
+  margin: 0;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .love-counter-container {
+    max-width: 340px;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+  }
+  
+  .counter-card {
+    padding: 1rem;
+  }
+  
+  .counter-text {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .time-display {
+    gap: 0.3rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .time-unit {
+    min-width: 40px;
+    padding: 0.5rem 0.3rem;
+  }
+  
+  .number {
+    font-size: 1rem;
+  }
+  
+  .label {
+    font-size: 0.65rem;
+  }
+  
+  .counting-text {
+    font-size: 0.8rem;
+  }
+  
+  .heart-decoration {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+}

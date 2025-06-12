@@ -1,0 +1,19 @@
+<div class="music-player">
+  <div class="player-container">
+    <div class="album-cover">
+      <img src="assets/album-cover.jpg" alt="Album Cover" class="cover-image">
+    </div>
+    
+    <div class="player-info">
+      <div class="song-name">Home ♡</div>
+      <div class="artist-name">Edward Sharpe & The Magnetic Zeros</div>
+    </div>
+    
+    <button (click)="togglePlay()" class="play-button">
+      <span class="play-icon">{{ isPlaying ? '⏸' : '▶' }}</span>
+    </button>    <audio #audioPlayer preload="auto" loop class="audio-element">
+      <source src="assets/romantic-song.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+  </div>
+</div>

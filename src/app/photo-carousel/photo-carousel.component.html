@@ -1,0 +1,51 @@
+<div class="carousel-container" 
+     (mouseenter)="pauseAutoAdvance()" 
+     (mouseleave)="resumeAutoAdvance()">
+  <div class="carousel-header">
+    <p class="carousel-title">Nossos momentos especiais</p>
+  </div>
+  
+  <div class="carousel-wrapper">
+    <button 
+      class="carousel-btn prev-btn" 
+      (click)="previousPhoto()"
+      [disabled]="photos.length === 0">
+      ‹
+    </button>
+    
+    <div class="carousel-content">
+      <div class="photo-container" *ngIf="photos.length > 0">
+        <img 
+          [src]="getCurrentPhoto()" 
+          [alt]="'Foto ' + (currentIndex + 1)"
+          class="carousel-photo"
+          (error)="onImageError()"
+        >
+        <div class="photo-counter">
+          {{ currentIndex + 1 }} / {{ photos.length }}
+        </div>
+      </div>
+      
+      <div class="no-photos" *ngIf="photos.length === 0">
+        <div class="placeholder-icon">📷</div>
+        <p>Adicione fotos especiais na pasta assets/photos/</p>
+      </div>
+    </div>
+    
+    <button 
+      class="carousel-btn next-btn" 
+      (click)="nextPhoto()"
+      [disabled]="photos.length === 0">
+      ›
+    </button>
+  </div>
+  
+  <div class="carousel-dots" *ngIf="photos.length > 0">
+    <button 
+      *ngFor="let photo of photos; let i = index"
+      class="dot"
+      [class.active]="i === currentIndex"
+      (click)="goToPhoto(i)">
+    </button>
+  </div>
+</div>
