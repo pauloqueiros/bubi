@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-# bubi2 - Projeto Romântico Minimalista ♡
+# bubi2 - Projeto Presente namoro ♡
 
-Uma aplicação Angular elegante e minimalista criada especialmente para uma mensagem de Dia dos Namorados para Bruna.
+Uma aplicação Angular criada especialmente para uma mensagem de Dia dos Namorados para Bruna.
 
 ## ✨ **Features**
 
